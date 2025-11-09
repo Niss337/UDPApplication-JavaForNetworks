@@ -31,7 +31,7 @@ An improved version of the UDP server that implements **basic reliability featur
 - Reads the **sequence number** from each message.  
 - Detects **duplicates** and **missing messages** (based on sequence numbers).  
 - Sends an acknowledgment (ACK) back to the client
-- 
+  
 ### 🧩 4. ReliableUDPClient.java
 A client that sends messages **reliably** over UDP:
 - Adds a **sequence number** to every message.  
@@ -50,6 +50,7 @@ It sends a message to a multicast group address (for example, 230.0.0.1 on port 
 ### 🌐 7. MulticastReceiver.java
 This receiver joins the same multicast group as the sender and listens for messages.
 Every message sent by the sender appears instantly on all active receivers, showing how multicast efficiently distributes one message to many clients.
+
 ###  How to Run the Programs
 ### ➤ Basic UDP Chat
 ### Server:
