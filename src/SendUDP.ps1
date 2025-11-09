@@ -1,6 +1,6 @@
-# Script pour envoyer un message UDP (remplace netcat)
+# Script to send UDP (replace  netcat )
 param(
-    [string]$message = "Test depuis PowerShell"
+    [string]$message = "Test from PowerShell"
 )
 
 $ip = "127.0.0.1"
@@ -13,7 +13,7 @@ try {
     $sent = $udpclient.Send($bytes, $bytes.Length, $endpoint)
     $udpclient.Close()
     
-    Write-Host "✅ Message envoyé ($sent bytes): $message" -ForegroundColor Green
+    Write-Host " Message sent ($sent bytes): $message" -ForegroundColor Green
 } catch {
-    Write-Host "❌ Erreur: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "Error : $($_.Exception.Message)" -ForegroundColor Red
 }
