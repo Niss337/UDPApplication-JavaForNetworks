@@ -37,8 +37,8 @@ A client that sends messages **reliably** over UDP:
 - Adds a **sequence number** to every message.  
 - Waits for a matching **ACK** from the server.  
 - If no ACK is received within **2 seconds**, it **retries up to 3 times**.
-  
-  ### ⚙️ 5. PacketLossSimulator.java
+
+### ⚙️ 5. PacketLossSimulator.java
 This program **simulates network packet loss**.  
 It listens on a UDP port and randomly **drops packets** based on a given loss rate (for example, 30% or 50%).  
 If a packet is not dropped, it sends back an ACK.
