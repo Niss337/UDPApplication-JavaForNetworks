@@ -24,7 +24,7 @@ It continuously receives packets and displays them in the format:
 ### 🔵 2. UDPClient.java
 A simple **UDP client** that sends messages to the server.  
 Each message is automatically **numbered** before sending (`1:Hello`, `2:Test`, …) so that we can track message order on the server side.  
-The client sends messages instantly without establishing a connection — showing how UDP transmits data directly without verification.
+The client sends messages instantly without establishing a connection , showing how UDP transmits data directly without verification.
 
 ### 🧩 3. ReliableUDPServer.java
 An improved version of the UDP server that implements **basic reliability features**:
@@ -82,6 +82,6 @@ Type a message → it appears on all receivers simultaneously.
 ### 📊 What We Learned
 UDP is connectionless and stateless, sending datagrams without handshake.
 Reliability can be simulated manually with sequence numbers, acknowledgments, and retries.
-Datagram transmission depends on buffer size — large messages can be truncated if the buffer is too small.
+Datagram transmission depends on buffer size , large messages can be truncated if the buffer is too small.
 Multicast allows efficient one-to-many communication without repeated unicast transmissions.
 In contrast, TCP automates reliability and flow control, which is why it’s preferred for guaranteed delivery.
